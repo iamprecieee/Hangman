@@ -13,15 +13,12 @@ while contract not in ["yes", "no"]:
 if contract == "yes":
   print(f"\nBEWARE, THE HANGMAN'S NOOSE!\n{hangman[6]}")
   difficulty = input("\nPLEASE CHOOSE YOUR PREFERRED DIFFICULTY LEVEL:\nEasy or Intermediate or Hard\n").lower()
-  key2 = ["easy", "hard", "intermediate"]
   while difficulty not in words:
     difficulty = input("\nPLEASE CHOOSE YOUR PREFERRED DIFFICULTY LEVEL:\nEasy or Intermediate or Hard\n").lower
   
   #randomly pick any word from the list of possible words depending on difficulty level
   random_word = random.choice(words[difficulty])
-  print(random_word)
     
-  
   #create a blank list to match the random word letter for letter, such that the letters are replaced by "_"
   blank = ["_" for x in random_word]
   
